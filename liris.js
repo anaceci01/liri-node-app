@@ -41,7 +41,7 @@ function concertThis(value) {
                 "--------------------------------------------------------------------" +
                     "\nVenue Name: " + response.data[i].venue.name + 
                     "\nVenue Location: " + response.data[i].venue.city +
-                    "\nDate of the Event: " + moment(dateArr[0], "MM-DD-YYYY"); //dateArr[0] should be the date separated from the time
+                    "\nEvent Date: " + moment(dateArr[0], "MM-DD-YYYY"); //dateArr[0] should be the date separated from the time
             console.log(concertResults);
         }
     })

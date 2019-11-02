@@ -36,7 +36,7 @@ function getBandsInTown(userSearch) {
     axios.get("https://rest.bandsintown.com/artists/" + userSearch + "/events?app_id=codingbootcamp")
         .then(function (response) {
             for (var i = 0; i < response.data.length; i++) {
-                var datetime = response.data[i].datetime
+                var datetime = response.data[i].datetime;
                 var dateArr = datetime.split('T');
 
                 var concertResults =
@@ -75,11 +75,31 @@ function spotifySong(userSearch) {
                     "\nAlbum: " + data.tracks.items[i].album.name +
                     console.log(spotifyResults);
             }
-
+        })
+        .catch(function (err) {
+            console.log(err);
+        });
+}
+function getOMBD(userSearch) {
+    if (!userSearch) {
+        userSearch = "Mr Nobody";
+    }
+    axios.get("https://www.omdbapi.com/?t=" + userSearch + "&y=&plot=short&apikey=trilogy")
+        .then(function(response) {
+            var movieResults =
+                "-----------------------------------------------------------------" +
+                "\nMovie Title: " + response.data.Title +
+                "\nYear of Release: " + response.data.Year +
+                "\nIMDB Rating: " + response.data.imbdRating +
+                "\nCountry where the movie was produced: " + response.data.Country +
+                "\nLanguage of the movie: " + response.data.Language +
+                "\nPlot of the movie: " + response.data.Plot +
+                "\nActors in the movie: " + response.data.Actors +
+                console.log(movieResults);
         })
         .catch(function (err) {
             console.log(err);
         });
 }
 
-
+function doThis()

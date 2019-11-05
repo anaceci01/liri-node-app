@@ -29,7 +29,7 @@ switch (appCommand) {
     case "do-what-it-says":
         getRandom(userSearch);
         break;
-}
+};
 
 //// ------------------- Function to search Bands In Town -------------------
 function getBandsInTown(userSearch) {
@@ -102,4 +102,12 @@ function getOMBD(userSearch) {
         });
 }
 
-function doThis()
+function getRandom (userSearch) { //why is userSearch grayed out?
+fs.readFile("random.txt", "utf8", function(error, data){
+    if (error){
+        return console.log(error);
+    }
+    var dataArr = data.split(',');
+    spotifySong(dataArr[0], dataArr[1]);
+ })
+}

@@ -90,7 +90,7 @@ function getOMBD(userSearch) {
                 "-----------------------------------------------------------------" +
                 "\nMovie Title: " + response.data.Title +
                 "\nYear of Release: " + response.data.Year +
-                "\nIMDB Rating: " + response.data.imbdRating +
+                "\nThe movie rating is: " + response.data.imbdRating +
                 "\nCountry where the movie was produced: " + response.data.Country +
                 "\nLanguage of the movie: " + response.data.Language +
                 "\nPlot of the movie: " + response.data.Plot +
@@ -103,11 +103,17 @@ function getOMBD(userSearch) {
 }
 
 function getRandom (userSearch) { //why is userSearch grayed out?
-fs.readFile("random.txt", "utf8", function(error, data){
-    if (error){
-        return console.log(error);
+fs.readFile("random.txt", "utf8", function(err, data){
+  
+    if (err) throw err;
+    console.log(data);
+
+    let arr = data.split(',');
+
+    if (arr.length == 2) {
+        userSearch(arr[0], arr[1]);
+    }else if(arr.length == 1) {
+        userSearch(arr[0]);
     }
-    var dataArr = data.split(',');
-    spotifySong(dataArr[0], dataArr[1]);
- })
-}
+ });
+};

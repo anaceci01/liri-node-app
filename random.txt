@@ -1,1 +1,12 @@
-spotify-this-song, "I Want it That Way"
+spotify-this-song, "I Want it That Way"===Spotify Requests===
+Artist: Harry Styles
+Song Name: Sign of the Times
+Preview Link: https://api.spotify.com/v1/tracks/5Ohxk2dO5COHF1krpoPigN
+Album Name: Harry Styles
+====End====
+===Spotify Requests===
+Artist: Ariana Grande
+Song Name: boyfriend (with Social House)
+Preview Link: https://api.spotify.com/v1/tracks/0Ryd8975WihbObpp5cPW1t
+Album Name: boyfriend
+====End====

@@ -1,30 +1,3 @@
-# Liri-node-app
-*by Ana Davis*
-
-
-Give a high-level overview of how the app is organized
-The liri-node app is an app where the user can find access to concert information of their favorite bands, such as name of the venue, venue location and date of the event. 
-It will aso show the following information about the song you request: artist, song name,a preview link of the song from Spotify and the album that the song is from. 
-
-
-
-
-
-
-Give start-to-finish instructions on how to run the app
-
-
-
-
-
-Include screenshots, gifs or videos of the app functioning
-Contain a link to a deployed version of the app
-Clearly list the technologies used in the app
-State your role in the app development
-
-
-
-
 # Liri-Node-App
 
 Liri is a one-stop command line node app that takes in paramenters for songs, bands, and movies and returns data
@@ -91,6 +64,79 @@ Liri is an app like iPhone's Siri, however, LIRI is a Language Interpretation an
     * actors in the movie
   * node liri.js do-what-it says
     * display the Spotify results for "I want it that way" stored in the random.txt file
+
+## Code by Command
+
+    ### concert-this
+
+    The use of concert-this was processed by using the Bands in Town API
+```
+function getBandsInTown(userSearch) {
+    axios.get("https://rest.bandsintown.com/artists/" + userSearch + "/events?app_id=codingbootcamp")
+        .then(function (response) {
+            for (var i = 0; i < response.data.length; i++) {
+                var datetime = response.data[i].datetime;
+                var dateArr = datetime.split('T');
+
+                var concertResults =
+                    "-----------------------------------------------------------------" +
+                    "\nVenue Name: " + response.data[i].venue.name +
+                    "\nVenue Location: " + response.data[i].venue.city +
+                    "\nDate of the Event: " + moment(dateArr[0], "MM-DD-YYY");
+                console.log(concertResults);
+            }
+        })
+        .catch(function (err) {
+            console.log(err);
+        });
+}
+```
+    [[https://github.com//Users/anaceci01/Desktop/bootcamp/liri-node-app/images/concert-this.jpg|alt=octocat]]
+
+
+### spotify-this-song
+    In order for spotify-this-song, we used Spotify API
+
+    ```
+function spotifySong(userSearch) {
+    var spotify = new Spotify(keys.spotify);
+    if (!userSearch) {
+        userSearch = "The Sign";
+    };
+
+    spotify.search(
+        {
+            type: "track",
+            query: userSearch
+        }, function (err, data) {
+            if (err) {
+                return console.log('Opps! something is wrong ' + err);
+            }
+            // Data Search from API
+            console.log("================================");
+            console.log("Artist(s) Name: " + data.tracks.items[0].album.artists[0].name + "\r\n");
+            console.log("Song Name: " + data.tracks.items[0].name + "\r\n");
+            console.log("Preview Link: " + data.tracks.items[0].href + "\r\n");
+            console.log("Album Name: " + data.tracks.items[0].album + "\r\n");
+
+            //Append text into log.tx file
+            var songReq = "===Spotify Requests===" +
+                "\nArtist: " + data.tracks.items[0].album.artists[0].name +
+                "\nSong Name: " + data.tracks.items[0].name +
+                "\nPreview Link: " + data.tracks.items[0].href +
+                "\nAlbum Name: " + data.tracks.items[0].album.name +
+                "\n====End====" +
+                "\n";
+
+            fs.appendFile("random.txt", songReq, function (err) {
+                if (err) throw (err);
+            });
+        });
+}
+```
+    [[https://github.com//Users/anaceci01/Desktop/bootcamp/liri-node-app/images/spotify-this.jpg|alt=octocat]]
+
+
 
 
  [Back to top](#)

@@ -134,7 +134,49 @@ function spotifySong(userSearch) {
         });
 }
 ```
-    [[https://github.com//Users/anaceci01/Desktop/bootcamp/liri-node-app/images/spotify-this.jpg|alt=octocat]]
+    [[https://github.com/Users/anaceci01/Desktop/bootcamp/liri-node-app/images/spotify-this.jpg|alt=octocat]]
+
+
+### movie-this 
+This command used the omdb API. An axios.get sent the search request and the results were console.logged.
+
+```
+function getOMBD(userSearch) {
+    if (!userSearch) {
+        userSearch = "Mr Nobody";
+    }
+    var movieURL = "https://www.omdbapi.com/?t=" + userSearch + "&y=&plot=short&apikey=trilogy";
+    axios.request(movieURL).then(function (response) {
+        console.log("================================");
+        console.log("Movie Title: " + response.data.Title + "\r\n");
+        console.log("Year: " + response.data.Year + "\r\n");
+        console.log("IMBD Rating: " + response.data.imbdRating + "\r\n");
+        console.log("Country: " + response.data.Country + "\r\n");
+        console.log("Language: " + response.data.Language + "\r\n");
+        console.log("Plot: " + response.data.Plot + "\r\n");
+        console.log("Actors: " + response.data.Actors + "\r\n");
+
+        var movieReq = "===Movie Requests===" +
+            "\nMovie Title: " + response.data.Title +
+            "\nYear: + " + response.data.Year +
+            "\nIMBD Rating: " + response.data.imbdRating +
+            "\nCountry: " + response.data.Country +
+            "\nLanguage: " + response.data.Language +
+            "\nPlot: " + response.data.Plot +
+            "\nActors: " + response.data.Actors +
+            "\n";
+
+        fs.appendFile("log.txt", "utf8", function (error, data) {
+            if (err) throw err;
+        });
+    });
+
+};
+```
+    [[https://github.com/Users/anaceci01/Desktop/bootcamp/liri-node-app/images/movie.this.jpg]]
+
+### do-what-it-says
+
 
 
 

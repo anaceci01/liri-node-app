@@ -1,27 +1,13 @@
-# Liri-Node-App
-
-Liri is a one-stop command line node app that takes in paramenters for songs, bands, and movies and returns data
-
-This app makes calls to the Spotify API, BandsInTown API,  and OMDB API search results
-
-When running this app in your command line, you may use the following to find your desired data:
-'spotify-this-song', 'concert-this', 'movie-this', and 'do-what-it-says'.
-
-
-***NOTE: If you would like to clone this repo, you will have to include your own.env file with your own unique Spotify ID and Secret. The format of your .env shoul look like below. Make sure to use your unique Spotify ID and Spotify Secret directly following the "-" below with no extra spaces.
-
-
-
-It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)
-
-
-
 # Liri Node 
  
 *Collaborators:* 
  
 *Ana Davis* 
  
+[link to liri-node repository!](https://anaceci01.github.io/liri-node-app/)
+
+
+
 ## About 
  
 Liri is an app like iPhone's Siri, however, LIRI is a Language Interpretation and Recognition Interface, therefore LIRI is a command line node app which takes in parameters that will give you back data. The app will make use of Spotify API, BandsInTown API, and OMDB API 

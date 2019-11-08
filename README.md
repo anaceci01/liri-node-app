@@ -89,6 +89,6 @@ This command used the omdb API. An axios.get sent the search request and the res
 
 liri-node-app/images/spotify-this.jpg
 
-![spotifyScreenshot](spotify-this.jpg)
+![spotifyScreenshot](https://raw.githubanaceci01.com/liri-node-app/images/spotify-this.jpg)
 
  [Back to top](#)

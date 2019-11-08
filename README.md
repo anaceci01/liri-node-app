@@ -4,7 +4,7 @@
  
 *Ana Davis* 
  
-[link to liri-node repository!](https://anaceci01.github.io/liri-node-app/)
+[link to liri-node repository](https://anaceci01.github.io/liri-node-app/)
 
 
 
@@ -13,8 +13,6 @@
 Liri is an app like iPhone's Siri, however, LIRI is a Language Interpretation and Recognition Interface, therefore LIRI is a command line node app which takes in parameters that will give you back data. The app will make use of Spotify API, BandsInTown API, and OMDB API 
 ## Index 
  
-[Expected Outcome](#Expected-Outcome) 
-
  
 ### The LIRI Bot was designed to produce search results based on the following commands:
  

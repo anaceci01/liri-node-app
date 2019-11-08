@@ -87,8 +87,8 @@ This command used the omdb API. An axios.get sent the search request and the res
 
 ### do-what-it-says
 
+liri-node-app/images/spotify-this.jpg
 
-
-
+![Image of Yaktocat](https://octodex.github.com/liri-node-app/images/spotify-this.jpg)
 
  [Back to top](#)

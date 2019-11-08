@@ -71,24 +71,27 @@ Liri is an app like iPhone's Siri, however, LIRI is a Language Interpretation an
 
 The use of concert-this was processed by using the Bands in Town API
 
-![image of concert this code](/liri-node-app/images/concert-this.jpg?raw=true "Concert This Code")
+![concertScreenshot](images/concert-this.jpg)
 
 
 ### spotify-this-song
 In order for spotify-this-song, we used Spotify API
     
-![image of spotify this code](/liri-node-app/images/spotify-this.jpg?raw=true "Spotify This Code")
+![spotifyScreenshot](images/spotify-this.jpg)
 
 
 ### movie-this 
 This command used the omdb API. An axios.get sent the search request and the results were console.logged.
 
-![image of movie this code](/liri-node-app/images/movie-this.jpg?raw=true "Movie This Code")
+![movieScreenshot](images/movie-this.jpg)
 
 ### do-what-it-says
 
-liri-node-app/images/spotify-this.jpg
+![spotifyRandomScreenshot](images/spotify-this-random.jpg)
 
-![spotifyScreenshot](https://raw.githubanaceci01.com/liri-node-app/images/spotify-this.jpg)
+### movie-this-random
+
+![movieRandomScreenshot](images/movie-this-random.jpg)
 
  [Back to top](#)
+

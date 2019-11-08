@@ -91,8 +91,8 @@ function getBandsInTown(userSearch) {
         });
 }
 ```
-    [[https://github.com//Users/anaceci01/Desktop/bootcamp/liri-node-app/images/concert-this.jpg|alt=octocat]]
-
+    ![Alt text](/liri-node-app/images/concert-this.jpg?raw=true "Optional Title")
+```
 
 ### spotify-this-song
     In order for spotify-this-song, we used Spotify API
@@ -134,6 +134,7 @@ function spotifySong(userSearch) {
         });
 }
 ```
+
     [[https://github.com/Users/anaceci01/Desktop/bootcamp/liri-node-app/images/spotify-this.jpg|alt=octocat]]
 
 

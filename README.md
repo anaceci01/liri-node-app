@@ -70,8 +70,8 @@ Liri is an app like iPhone's Siri, however, LIRI is a Language Interpretation an
     ### concert-this
 
     The use of concert-this was processed by using the Bands in Town API
-```
-function getBandsInTown(userSearch) {
+
+```function getBandsInTown(userSearch) {
     axios.get("https://rest.bandsintown.com/artists/" + userSearch + "/events?app_id=codingbootcamp")
         .then(function (response) {
             for (var i = 0; i < response.data.length; i++) {
@@ -89,16 +89,18 @@ function getBandsInTown(userSearch) {
         .catch(function (err) {
             console.log(err);
         });
-}
-```
-    ![Alt text](/liri-node-app/images/concert-this.jpg?raw=true "Optional Title")
+}```
+
+
+
+    ![image of concert this code](/liri-node-app/images/concert-this.jpg?raw=true "Optional Title")
 
 
 ### spotify-this-song
     In order for spotify-this-song, we used Spotify API
 
-    ```
-function spotifySong(userSearch) {
+    
+```function spotifySong(userSearch) {
     var spotify = new Spotify(keys.spotify);
     if (!userSearch) {
         userSearch = "The Sign";
@@ -132,8 +134,8 @@ function spotifySong(userSearch) {
                 if (err) throw (err);
             });
         });
-}
-```
+}```
+
 
     [[https://github.com/Users/anaceci01/Desktop/bootcamp/liri-node-app/images/spotify-this.jpg|alt=octocat]]
 
@@ -141,8 +143,8 @@ function spotifySong(userSearch) {
 ### movie-this 
 This command used the omdb API. An axios.get sent the search request and the results were console.logged.
 
-```
-function getOMBD(userSearch) {
+
+```function getOMBD(userSearch) {
     if (!userSearch) {
         userSearch = "Mr Nobody";
     }
@@ -172,8 +174,8 @@ function getOMBD(userSearch) {
         });
     });
 
-};
-```
+};```
+
     [[https://github.com/Users/anaceci01/Desktop/bootcamp/liri-node-app/images/movie.this.jpg]]
 
 ### do-what-it-says

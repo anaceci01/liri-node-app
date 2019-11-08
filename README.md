@@ -92,7 +92,7 @@ function getBandsInTown(userSearch) {
 }
 ```
     ![Alt text](/liri-node-app/images/concert-this.jpg?raw=true "Optional Title")
-```
+
 
 ### spotify-this-song
     In order for spotify-this-song, we used Spotify API
